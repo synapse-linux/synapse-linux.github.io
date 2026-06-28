@@ -5,7 +5,7 @@ permalink: /it/about/
 lang: it
 ---
 
-# Informazioni su Synapse Linux
+# Informazioni su Synapse Linux <span class="badge badge-experimental">SPERIMENTALE</span>
 
 **Synapse Linux** è una derivata diretta di CachyOS, focalizzata sul supporto **AMD Strix Halo AI** — accelerazione GPU ROCm, driver XDNA AI e controllo ventole/potenza custom per MiniPC e laptop Strix Halo.
 

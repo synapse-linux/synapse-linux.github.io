@@ -7,11 +7,11 @@ lang: it
 
 <div class="hero">
   <span class="hero-icon">⬡</span>
-  <h1>Synapse Linux</h1>
+  <h1>Synapse Linux <span class="badge badge-experimental">SPERIMENTALE</span></h1>
   <p>Una derivata diretta di <strong>CachyOS</strong> con supporto <strong>AMD Strix Halo AI</strong> — accelerazione GPU ROCm, driver XDNA AI, controllo ventole custom e un installer Calamares intelligente.</p>
   <div class="hero-actions">
     <a href="#" class="btn btn-primary">Scarica ISO</a>
-    <a href="/it/about/" class="btn btn-secondary">Scopri di più</a>
+    <a href="/it/strix-halo/" class="btn btn-secondary">Tecnica Strix Halo</a>
   </div>
 </div>
 

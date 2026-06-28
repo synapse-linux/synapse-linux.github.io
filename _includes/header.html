@@ -9,14 +9,16 @@
     {%- assign lang = page.lang | default: 'en' -%}
     {%- if lang == 'en' -%}
       <a href="{{ '/en/' | relative_url }}" {% if page.url == '/en/' or page.url == '/' %}class="active"{% endif %}>Home</a>
+      <a href="{{ '/en/strix-halo/' | relative_url }}" {% if page.url contains '/en/strix-halo' %}class="active"{% endif %}>Strix Halo</a>
+      <a href="{{ '/en/docs/' | relative_url }}" {% if page.url contains '/en/docs' %}class="active"{% endif %}>Docs</a>
       <a href="{{ '/en/about/' | relative_url }}" {% if page.url contains '/en/about' %}class="active"{% endif %}>About</a>
       <a href="{{ '/en/blog/' | relative_url }}" {% if page.url contains '/en/blog' %}class="active"{% endif %}>Blog</a>
-      <a href="{{ '/en/docs/' | relative_url }}" {% if page.url contains '/en/docs' %}class="active"{% endif %}>Docs</a>
     {%- elsif lang == 'it' -%}
       <a href="{{ '/it/' | relative_url }}" {% if page.url == '/it/' %}class="active"{% endif %}>Home</a>
+      <a href="{{ '/it/strix-halo/' | relative_url }}" {% if page.url contains '/it/strix-halo' %}class="active"{% endif %}>Strix Halo</a>
+      <a href="{{ '/it/docs/' | relative_url }}" {% if page.url contains '/it/docs' %}class="active"{% endif %}>Doc</a>
       <a href="{{ '/it/about/' | relative_url }}" {% if page.url contains '/it/about' %}class="active"{% endif %}>Info</a>
       <a href="{{ '/it/blog/' | relative_url }}" {% if page.url contains '/it/blog' %}class="active"{% endif %}>Blog</a>
-      <a href="{{ '/it/docs/' | relative_url }}" {% if page.url contains '/it/docs' %}class="active"{% endif %}>Doc</a>
     {%- endif -%}
   </nav>
   <div class="lang-switcher">
