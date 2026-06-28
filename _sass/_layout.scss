@@ -1,7 +1,7 @@
 /* ⟁ Synapse — layout */
 
 .content {
-  max-width: 780px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
@@ -12,28 +12,66 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5rem 1.5rem 1rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--bg-alt);
   border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+  background: rgba(248, 249, 252, 0.9);
 
-  .brand .logo {
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: var(--fg);
-    letter-spacing: -0.02em;
+  @media (prefers-color-scheme: dark) {
+    background: rgba(15, 15, 26, 0.9);
+  }
 
-    span {
-      color: var(--accent);
+  .brand {
+    display: flex;
+    align-items: center;
+
+    .logo {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--fg);
+      letter-spacing: -0.02em;
+      transition: opacity 0.15s;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+
+      .logo-icon {
+        background: var(--gradient-1);
+        width: 28px;
+        height: 28px;
+        border-radius: 6px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 0.95rem;
+        font-weight: 700;
+      }
+
+      span {
+        color: var(--accent);
+      }
+
+      &:hover {
+        opacity: 0.85;
+        text-decoration: none;
+      }
     }
   }
 
   .nav {
     display: flex;
-    gap: 1.25rem;
+    gap: 1.5rem;
 
     a {
       font-size: 0.9rem;
       color: var(--muted);
       transition: color 0.15s;
+      position: relative;
 
       &:hover {
         color: var(--fg);
@@ -42,6 +80,17 @@
       &.active {
         color: var(--accent);
         font-weight: 600;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -4px;
+          left: 0;
+          right: 0;
+          height: 2px;
+          background: var(--gradient-1);
+          border-radius: 1px;
+        }
       }
     }
   }
@@ -50,23 +99,74 @@
 /* ── main ── */
 
 main.content {
-  padding-top: 2.5rem;
+  padding-top: 3rem;
   padding-bottom: 3rem;
+
+  /* Section styling */
+  section {
+    margin-bottom: 2.5rem;
+  }
+}
+
+/* ── features grid ── */
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+
+/* ── posts list ── */
+
+.post-list {
+  list-style: none;
+  padding: 0;
+
+  li {
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--border);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .post-link {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--fg);
+    display: block;
+    margin-bottom: 0.2rem;
+
+    &:hover {
+      color: var(--accent);
+      text-decoration: none;
+    }
+  }
+
+  .post-meta {
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
 }
 
 /* ── footer ── */
 
 .site-footer {
   border-top: 1px solid var(--border);
-  padding: 1.5rem 0;
+  padding: 2rem 0;
+  margin-top: 2rem;
 
   .footer-inner {
-    max-width: 780px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 0 1.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 
   .copyright {
@@ -80,15 +180,20 @@ main.content {
         color: var(--fg);
       }
     }
+
+    .heart {
+      color: #e11d48;
+    }
   }
 
   .footer-nav {
     display: flex;
-    gap: 0.75rem;
+    gap: 1rem;
 
     a {
       font-size: 0.85rem;
       color: var(--muted);
+      transition: color 0.15s;
 
       &:hover {
         color: var(--fg);

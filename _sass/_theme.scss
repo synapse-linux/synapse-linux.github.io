@@ -1,25 +1,50 @@
 /* ⟁ Synapse — theme colors */
 
 :root {
-  --bg: #fafafa;
-  --fg: #1a1a1a;
-  --accent: #2a7de1;
-  --border: #e0e0e0;
-  --muted: #555;
-  --inline-code-bg: #e8e8e8;
-  --code-bg: #f0f0f0;
-  --table-header-bg: #ececec;
+  --bg: #f8f9fc;
+  --bg-alt: #ffffff;
+  --fg: #1a1a2e;
+  --fg-light: #4a4a6a;
+  --accent: #6366f1;
+  --accent-light: #a5b4fc;
+  --accent-dark: #4f46e5;
+  --accent-bg: #eef2ff;
+  --border: #e2e8f0;
+  --muted: #6b7280;
+  --inline-code-bg: #f1f5f9;
+  --code-bg: #1e293b;
+  --code-fg: #f8fafc;
+  --table-header-bg: #f1f5f9;
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.06);
+  --gradient-1: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  --gradient-2: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);
+  --success: #10b981;
+  --warning: #f59e0b;
+  --radius: 8px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #121212;
-    --fg: #ececec;
-    --accent: #6a9ff5;
-    --border: #333;
-    --muted: #999;
-    --inline-code-bg: #2a2a2a;
-    --code-bg: #1e1e1e;
-    --table-header-bg: #2a2a2a;
+    --bg: #0f0f1a;
+    --bg-alt: #1a1a2e;
+    --fg: #ececf0;
+    --fg-light: #9e9eb8;
+    --accent: #818cf8;
+    --accent-light: #a5b4fc;
+    --accent-dark: #6366f1;
+    --accent-bg: #1e1e3a;
+    --border: #2a2a44;
+    --muted: #7e7e9e;
+    --inline-code-bg: #1e1e3a;
+    --code-bg: #0a0a14;
+    --code-fg: #ececf0;
+    --table-header-bg: #1e1e3a;
+    --card-bg: #1a1a2e;
+    --card-shadow: rgba(0, 0, 0, 0.3);
+    --gradient-1: linear-gradient(135deg, #818cf8 0%, #a78bfa 100%);
+    --gradient-2: linear-gradient(135deg, #818cf8 0%, #60a5fa 100%);
+    --success: #34d399;
+    --warning: #fbbf24;
   }
 }
