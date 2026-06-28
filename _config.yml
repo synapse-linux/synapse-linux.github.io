@@ -1,5 +1,5 @@
 title: "Synapse Linux"
-description: "Synapse Linux — A minimal, fast Linux distribution"
+description: "Synapse Linux — An Arch Linux distribution with AMD Strix Halo AI support"
 url: "https://synapse-linux.github.io"
 baseurl: ""
 repository: "synapse-linux/synapse-linux.github.io"
@@ -10,6 +10,9 @@ permalink: pretty
 
 # GitHub Pages settings
 github_metadata: true
+
+# Cache-busting version (auto-updates on each build)
+version: "{{ site.time | date: '%s' }}"
 
 # Plugins
 plugins:
@@ -43,3 +46,4 @@ exclude:
   - Gemfile.lock
   - README.md
   - vendor
+  - package.json

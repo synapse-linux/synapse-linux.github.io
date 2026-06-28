@@ -1,15 +1,14 @@
 ---
 layout: default
 title: Blog
-permalink: /blog/
+permalink: /it/blog/
+lang: it
 ---
 
 # Blog
 
 {% for post in site.posts %}
+{% if post.lang == 'it' %}
 - [{{ post.title }}]({{ post.url | relative_url }}) — {{ post.date | date: '%B %d, %Y' }}
+{% endif %}
 {% endfor %}
-
----
-
-🇬🇧 [English blog](/en/blog/) · 🇮🇹 [Blog italiano](/it/blog/)

@@ -1,0 +1,14 @@
+{%- assign lang = page.lang | default: 'en' -%}
+{%- if lang == 'en' -%}
+  {%- assign switch_url = page.url | replace: '/it/', '/en/' | replace: '/en/', '/en/' -%}
+  {%- if page.url == '/' or page.url == '/en/' -%}
+    {%- assign switch_url = '/it/' -%}
+  {%- endif -%}
+  <a href="{{ switch_url }}" class="lang-link" title="Italiano">🇮🇹 <span>Italiano</span></a>
+{%- elsif lang == 'it' -%}
+  {%- assign switch_url = page.url | replace: '/it/', '/en/' -%}
+  {%- if page.url == '/it/' -%}
+    {%- assign switch_url = '/en/' -%}
+  {%- endif -%}
+  <a href="{{ switch_url }}" class="lang-link" title="English">🇬🇧 <span>English</span></a>
+{%- endif -%}

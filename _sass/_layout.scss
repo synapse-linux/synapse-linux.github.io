@@ -94,6 +94,28 @@
       }
     }
   }
+
+  .lang-switcher {
+    margin-left: 1rem;
+
+    .lang-link {
+      font-size: 0.85rem;
+      color: var(--muted);
+      transition: color 0.15s;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+
+      &:hover {
+        color: var(--fg);
+        text-decoration: none;
+      }
+
+      span {
+        font-size: 0.8rem;
+      }
+    }
+  }
 }
 
 /* ── main ── */
@@ -102,7 +124,6 @@ main.content {
   padding-top: 3rem;
   padding-bottom: 3rem;
 
-  /* Section styling */
   section {
     margin-bottom: 2.5rem;
   }
