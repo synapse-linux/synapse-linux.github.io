@@ -1,0 +1,47 @@
+title: "Synapse Linux"
+description: "Synapse Linux — A minimal, fast Linux distribution"
+url: "https://synapse-linux.github.io"
+baseurl: ""
+repository: "synapse-linux/synapse-linux.github.io"
+
+# Build settings
+markdown: kramdown
+theme: jekyll-theme-primer
+permalink: pretty
+
+# GitHub Pages settings
+github_metadata: true
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-paginate
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: "Synapse Team"
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor

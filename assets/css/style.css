@@ -1,0 +1,89 @@
+/* Synapse Linux — Minimal theme */
+:root {
+  --bg: #fafafa;
+  --fg: #1a1a1a;
+  --accent: #2a7de1;
+  --border: #e0e0e0;
+  --muted: #555;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1a1a1a;
+    --fg: #f0f0f0;
+    --accent: #6a9ff5;
+    --border: #333;
+    --muted: #aaa;
+  }
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+header {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+header nav {
+  margin-bottom: 0.5rem;
+}
+
+header nav a {
+  margin-right: 1rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+header nav a:hover { text-decoration: underline; }
+
+header h1 { font-size: 1.8rem; }
+
+header h1 a {
+  color: var(--fg);
+  text-decoration: none;
+}
+
+main { margin-bottom: 3rem; }
+
+main h1 { font-size: 1.6rem; margin: 1.5rem 0 0.5rem; }
+main h2 { font-size: 1.3rem; margin: 1.2rem 0 0.4rem; }
+main h3 { font-size: 1.1rem; margin: 1rem 0 0.3rem; }
+
+main p, main li { margin-bottom: 0.6rem; }
+
+main a { color: var(--accent); }
+
+main code {
+  background: var(--border);
+  padding: 0.15rem 0.3rem;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+main pre {
+  background: var(--border);
+  padding: 0.8rem;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+main ul, main ol { padding-left: 1.5rem; }
+
+footer {
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
