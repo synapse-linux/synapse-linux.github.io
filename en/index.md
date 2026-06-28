@@ -11,20 +11,20 @@ lang: en
   <h2>Features</h2>
   <div class="features">
     <div class="card">
-      <h3>⚡ Optimized Performance</h3>
-      <p>CachyOS kernels with auto-tuning, BBR, and CPU optimizations for maximum throughput.</p>
-    </div>
-    <div class="card">
       <h3>🤖 AMD Strix Halo AI</h3>
       <p>ROCm GPU acceleration and XDNA AI driver packages for AMD Strix Halo (Ryzen AI Max 395/385/370). Integrated AI package chooser in Calamares.</p>
     </div>
     <div class="card">
-      <h3>📦 ROCm Stack</h3>
+      <h3>📦 ROCm Compute Stack</h3>
       <p>Installs <code>rocm-hip-sdk</code>, <code>rocm-opencl-sdk</code>, <code>miopen-hip</code>, <code>rocblas</code>, and 20+ ROCm packages for full GPU compute.</p>
     </div>
     <div class="card">
-      <h3>🔧 Fan & Power Control</h3>
+      <h3>🔧 Fan &amp; Power Control</h3>
       <p><code>synapse-ec-su-axb35-linux</code> DKMS kernel module with custom fan curves and power modes for AXB35 MiniPCs.</p>
+    </div>
+    <div class="card">
+      <h3>🔩 XDNA AI Driver</h3>
+      <p><code>xrt-plugin-amdxdna</code> — AMD XDNA AI kernel driver for the Strix Halo NPU, enabling on-device AI inference.</p>
     </div>
   </div>
 </section>

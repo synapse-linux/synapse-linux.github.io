@@ -7,13 +7,13 @@ lang: it
 
 # Informazioni su Synapse Linux
 
-**Synapse Linux** è una distribuzione basata su Arch Linux mantenuta da **Mario Giustiniani**, focalizzata sul supporto **AMD Strix Halo AI** — accelerazione GPU ROCm, driver XDNA AI e controllo ventole/potenza custom per MiniPC e laptop Strix Halo.
+**Synapse Linux** è una derivata diretta di CachyOS, focalizzata sul supporto **AMD Strix Halo AI** — accelerazione GPU ROCm, driver XDNA AI e controllo ventole/potenza custom per MiniPC e laptop Strix Halo.
 
 ## Cosa rende Synapse diverso?
 
 | Funzione | Descrizione |
 |----------|-------------|
-| **Base CachyOS** | Costruita sui kernel e toolchain ottimizzati di CachyOS con auto-tuning |
+| **Derivata CachyOS** | Derivata diretta di CachyOS — eredita kernel ottimizzato, toolchain e auto-tuning |
 | **Integrazione AI** | Installer Calamares custom con package chooser AI (stack ROCm + XDNA AI) |
 | **Stack ROCm** | Installa `rocm-hip-sdk`, `rocm-opencl-sdk`, `rocm-ml-sdk`, `miopen-hip`, `rocblas` e 20+ pacchetti ROCm |
 | **Driver XDNA AI** | `xrt-plugin-amdxdna` — driver kernel AMD XDNA AI per NPU Strix Halo |
@@ -33,15 +33,6 @@ L'installer offre **quattro opzioni** durante la configurazione:
 | **AMD Strix Halo AI** | Accelerazione GPU ROCm + driver XDNA AI per Strix Halo (Ryzen AI Max 395/385/370) | `synapse-strixhalo-config`, ROCm SDK, `xrt-plugin-amdxdna` |
 | **Bosgame M5** | Profilo completo ventole + potenza per Bosgame M5 MiniPC | Stack Strix Halo core + `synapse-ec-su-axb35-linux` |
 | **ROG Flow Z13-KJP** | Controllo ventole + potenza per ASUS ROG Flow Z13 laptop | Stack Strix Halo core + `asusctl` + `rog-control-center` |
-
-## Bootloader Chooser
-
-GRUB, rEFInd, systemd-boot o Limine — seleziona durante l'installazione.
-
-## Desktop Chooser
-
-Scegli tra Plasma (default), GNOME, Cosmic, Niri, Cinnamon, Budgie, MATE, Xfce, LXQt, LXDE, Hyprland, MangoWM, Sway, Wayfire, i3, Qtile, bspwm, Openbox o nessun desktop.
-
 ## Struttura dei repository
 
 ```
@@ -59,15 +50,9 @@ CachyOS-PKGBUILDS  ───────► cachyos-calamares (PKGBUILD → inst
 ## Sequenza di installazione Calamares
 
 ```
-welcome → locale → keyboard → packagechooser@ai → packagechooser@bootloader
-→ partition → packagechooser@desktop → netinstall → server → users → summary
+welcome → locale → keyboard → packagechooser@ai → partition → netinstall → server → users → summary
 ```
 Seguita da exec: partition → mount → shellprocess hooks → pacstrap → packages → bootloader → server services → cleanup.
-
-## Team
-
-Mantenuto da **Mario Giustiniani** ([mgiustiniani](https://github.com/mgiustiniani)) con contributi dalla comunità CachyOS.
-
 ## Link
 
 - [GitHub Organization](https://github.com/synapse-linux)

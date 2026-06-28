@@ -9,7 +9,7 @@ lang: en
 
 Welcome to the official Synapse Linux website!
 
-**Synapse Linux** is a fork of CachyOS with customizations focused on **AMD Strix Halo AI** support. Our workspace includes:
+**Synapse Linux** is a direct derivative of CachyOS, with customizations focused on **AMD Strix Halo AI** support. Our workspace includes:
 
 ### Calamares AI Package Chooser
 
@@ -20,11 +20,9 @@ The installer offers four options:
 3. **Bosgame M5** — full fan/power profile: core ROCm + `synapse-ec-su-axb35-linux`
 4. **ROG Flow Z13-KJP** — ASUS hardware control: core ROCm + `asusctl` + `rog-control-center`
 
-### Additional Choosers
+### Server Module
 
-- **Bootloader**: GRUB, rEFInd, systemd-boot, or Limine
-- **Desktop**: Plasma, GNOME, Cosmic, Niri, Cinnamon, Budgie, MATE, Xfce, LXQt, LXDE, Hyprland, MangoWM, Sway, Wayfire, i3, Qtile, bspwm, Openbox, or no desktop
-- **Server**: SSH, VNC, and LLM (DS4) configuration module
+SSH, VNC, and LLM (DS4) configuration during installation.
 
 ### Latest build
 

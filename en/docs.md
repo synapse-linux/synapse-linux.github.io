@@ -51,15 +51,13 @@ Server = https://raw.githubusercontent.com/mgiustiniani/synapse-pacman-repositor
 |---------|-------------|
 | `synapse-strixhalo-config` | Kernel module parameters for AMD Strix Halo (IOMMU, GTT size, TTM pages) |
 | `synapse-ec-su-axb35-linux` | DKMS kernel module for fan and power control on AXB35 MiniPCs |
-| `synapse-calamares` | Custom Calamares installer with AI package chooser, server module, bootloader/desktop chooser |
+| `synapse-calamares` | Custom Calamares installer with AI package chooser and server module |
 
 ## Calamares installer modules
 
 | Module | Config | Purpose |
 |--------|--------|---------|
 | `packagechooser@ai` | `packagechooser_ai.conf` | AI/LLM optimization chooser (No AI / Strix Halo / Bosgame M5 / ROG Z13) |
-| `packagechooser@bootloader` | `packagechooser_bootloader.conf` | Bootloader selection (GRUB, rEFInd, systemd-boot, Limine) |
-| `packagechooser@desktop` | `packagechooser_desktop.conf` | Desktop environment selection |
 | `netinstall` | `netinstall.yaml` | Package groups (CachyOS required, base-devel, desktop-specific, gaming, etc.) |
 | `server` | `server.conf` + `server.qml` | SSH, VNC, and LLM (DS4) configuration |
 | `shellprocess` | various `.conf` | Pre/post-install hooks (pacman init, Btrfs snapshot, UFW, cleanup) |
@@ -67,8 +65,7 @@ Server = https://raw.githubusercontent.com/mgiustiniani/synapse-pacman-repositor
 ## Installation sequence
 
 ```
-show:   welcome → locale → keyboard → packagechooser@ai → packagechooser@bootloader
-        → partition → packagechooser@desktop → netinstall → server → users → summary
+show:   welcome → locale → keyboard → packagechooser@ai → partition → netinstall → server → users → summary
 exec:   partition → zfs → mount → shellprocess hooks → pacstrap → machineid → locale
         → keyboard → localecfg → chwd → packages@online → fstab → plymouthcfg
         → initcpiocfg → initcpio → users → networkcfg → displaymanager → hwclock
@@ -91,7 +88,7 @@ The QML-based server module (`server.qml`) dynamically shows SSH and VNC configu
 
 ## Fan control (AXB35)
 
-After installing `synopsis-ec-su-axb35-linux`:
+After installing `synapse-ec-su-axb35-linux`:
 
 ```bash
 # Enable the service

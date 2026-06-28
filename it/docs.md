@@ -51,15 +51,13 @@ Server = https://raw.githubusercontent.com/mgiustiniani/synapse-pacman-repositor
 |-----------|-------------|
 | `synapse-strixhalo-config` | Parametri modulo kernel per AMD Strix Halo (IOMMU, GTT size, TTM pages) |
 | `synapse-ec-su-axb35-linux` | Modulo kernel DKMS per controllo ventole e potenza su MiniPC AXB35 |
-| `synapse-calamares` | Installer Calamares custom con package chooser AI, modulo server, bootloader/desktop chooser |
+| `synapse-calamares` | Installer Calamares custom con package chooser AI e modulo server |
 
 ## Moduli Calamares
 
 | Modulo | Config | Scopo |
 |--------|--------|-------|
 | `packagechooser@ai` | `packagechooser_ai.conf` | Scelta ottimizzazione AI/LLM (No AI / Strix Halo / Bosgame M5 / ROG Z13) |
-| `packagechooser@bootloader` | `packagechooser_bootloader.conf` | Scelta bootloader (GRUB, rEFInd, systemd-boot, Limine) |
-| `packagechooser@desktop` | `packagechooser_desktop.conf` | Scelta ambiente desktop |
 | `netinstall` | `netinstall.yaml` | Gruppi di pacchetti (CachyOS required, base-devel, desktop-specific, gaming, ecc.) |
 | `server` | `server.conf` + `server.qml` | Configurazione SSH, VNC e LLM (DS4) |
 | `shellprocess` | vari `.conf` | Hook pre/post-install (pacman init, snapshot Btrfs, UFW, cleanup) |
@@ -67,8 +65,7 @@ Server = https://raw.githubusercontent.com/mgiustiniani/synapse-pacman-repositor
 ## Sequenza di installazione
 
 ```
-show:   welcome → locale → keyboard → packagechooser@ai → packagechooser@bootloader
-        → partition → packagechooser@desktop → netinstall → server → users → summary
+show:   welcome → locale → keyboard → packagechooser@ai → partition → netinstall → server → users → summary
 exec:   partition → zfs → mount → shellprocess hooks → pacstrap → machineid → locale
         → keyboard → localecfg → chwd → packages@online → fstab → plymouthcfg
         → initcpiocfg → initcpio → users → networkcfg → displaymanager → hwclock

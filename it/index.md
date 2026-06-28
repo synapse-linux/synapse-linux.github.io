@@ -8,7 +8,7 @@ lang: it
 <div class="hero">
   <span class="hero-icon">⬡</span>
   <h1>Synapse Linux</h1>
-  <p>Una distribuzione Arch Linux con supporto <strong>AMD Strix Halo AI</strong> — accelerazione GPU ROCm, driver XDNA AI, controllo ventole custom e un installer Calamares intelligente.</p>
+  <p>Una derivata diretta di <strong>CachyOS</strong> con supporto <strong>AMD Strix Halo AI</strong> — accelerazione GPU ROCm, driver XDNA AI, controllo ventole custom e un installer Calamares intelligente.</p>
   <div class="hero-actions">
     <a href="#" class="btn btn-primary">Scarica ISO</a>
     <a href="/it/about/" class="btn btn-secondary">Scopri di più</a>
@@ -19,20 +19,20 @@ lang: it
   <h2>Caratteristiche</h2>
   <div class="features">
     <div class="card">
-      <h3>⚡ Performance Ottimizzate</h3>
-      <p>Kernel CachyOS con auto-tuning, BBR e ottimizzazioni CPU per massimo throughput.</p>
-    </div>
-    <div class="card">
       <h3>🤖 AMD Strix Halo AI</h3>
       <p>Pacchetti di accelerazione GPU ROCm e driver XDNA AI per AMD Strix Halo (Ryzen AI Max 395/385/370). Package chooser AI integrato in Calamares.</p>
     </div>
     <div class="card">
-      <h3>📦 Stack ROCm</h3>
+      <h3>📦 Stack Compute ROCm</h3>
       <p>Installa <code>rocm-hip-sdk</code>, <code>rocm-opencl-sdk</code>, <code>miopen-hip</code>, <code>rocblas</code> e 20+ pacchetti ROCm per compute GPU completo.</p>
     </div>
     <div class="card">
       <h3>🔧 Controllo Ventole</h3>
       <p>Modulo kernel DKMS <code>synapse-ec-su-axb35-linux</code> con curve ventole custom e modalità di potenza per MiniPC AXB35.</p>
+    </div>
+    <div class="card">
+      <h3>🔩 Driver XDNA AI</h3>
+      <p><code>xrt-plugin-amdxdna</code> — driver kernel AMD XDNA AI per NPU Strix Halo, per inferenza AI on-device.</p>
     </div>
   </div>
 </section>
