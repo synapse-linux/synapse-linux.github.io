@@ -16,15 +16,15 @@ lang: en
     </div>
     <div class="card">
       <h3>🤖 AMD Strix Halo AI</h3>
-      <p>Integrated AI package chooser in Calamares — install <code>synapse-strixhalo-config</code> and fan control for AXB35 MiniPCs.</p>
+      <p>ROCm GPU acceleration and XDNA AI driver packages for AMD Strix Halo (Ryzen AI Max 395/385/370). Integrated AI package chooser in Calamares.</p>
     </div>
     <div class="card">
-      <h3>📦 Custom Packages</h3>
-      <p>Maintained PKGBUILDs for kernel modules, system settings, and gaming optimizations via the <code>[synapse-linux]</code> pacman repository.</p>
+      <h3>📦 ROCm Stack</h3>
+      <p>Installs <code>rocm-hip-sdk</code>, <code>rocm-opencl-sdk</code>, <code>miopen-hip</code>, <code>rocblas</code>, and 20+ ROCm packages for full GPU compute.</p>
     </div>
     <div class="card">
-      <h3>🔓 Open Source</h3>
-      <p>100% free and open-source. All PKGBUILDs, ISO builder, and Calamares modules available on GitHub.</p>
+      <h3>🔧 Fan & Power Control</h3>
+      <p><code>synapse-ec-su-axb35-linux</code> DKMS kernel module with custom fan curves and power modes for AXB35 MiniPCs.</p>
     </div>
   </div>
 </section>

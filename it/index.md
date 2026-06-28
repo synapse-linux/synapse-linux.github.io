@@ -8,7 +8,7 @@ lang: it
 <div class="hero">
   <span class="hero-icon">⬡</span>
   <h1>Synapse Linux</h1>
-  <p>Una distribuzione Arch Linux con supporto <strong>AMD Strix Halo AI</strong> — kernel ottimizzati, controllo ventole custom e un installer intelligente.</p>
+  <p>Una distribuzione Arch Linux con supporto <strong>AMD Strix Halo AI</strong> — accelerazione GPU ROCm, driver XDNA AI, controllo ventole custom e un installer Calamares intelligente.</p>
   <div class="hero-actions">
     <a href="#" class="btn btn-primary">Scarica ISO</a>
     <a href="/it/about/" class="btn btn-secondary">Scopri di più</a>
@@ -24,15 +24,15 @@ lang: it
     </div>
     <div class="card">
       <h3>🤖 AMD Strix Halo AI</h3>
-      <p>Package chooser AI integrato in Calamares — installa <code>synapse-strixhalo-config</code> e controllo ventole per MiniPC AXB35.</p>
+      <p>Pacchetti di accelerazione GPU ROCm e driver XDNA AI per AMD Strix Halo (Ryzen AI Max 395/385/370). Package chooser AI integrato in Calamares.</p>
     </div>
     <div class="card">
-      <h3>📦 Pacchetti Custom</h3>
-      <p>PKGBUILD mantenuti per kernel module, impostazioni di sistema e gaming tramite il repository <code>[synapse-linux]</code> pacman.</p>
+      <h3>📦 Stack ROCm</h3>
+      <p>Installa <code>rocm-hip-sdk</code>, <code>rocm-opencl-sdk</code>, <code>miopen-hip</code>, <code>rocblas</code> e 20+ pacchetti ROCm per compute GPU completo.</p>
     </div>
     <div class="card">
-      <h3>🔓 Open Source</h3>
-      <p>100% libero e open-source. Tutti i PKGBUILD, il builder ISO e i moduli Calamares sono su GitHub.</p>
+      <h3>🔧 Controllo Ventole</h3>
+      <p>Modulo kernel DKMS <code>synapse-ec-su-axb35-linux</code> con curve ventole custom e modalità di potenza per MiniPC AXB35.</p>
     </div>
   </div>
 </section>
