@@ -1,0 +1,25 @@
+/* ⟁ Synapse — theme colors */
+
+:root {
+  --bg: #fafafa;
+  --fg: #1a1a1a;
+  --accent: #2a7de1;
+  --border: #e0e0e0;
+  --muted: #555;
+  --inline-code-bg: #e8e8e8;
+  --code-bg: #f0f0f0;
+  --table-header-bg: #ececec;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121212;
+    --fg: #ececec;
+    --accent: #6a9ff5;
+    --border: #333;
+    --muted: #999;
+    --inline-code-bg: #2a2a2a;
+    --code-bg: #1e1e1e;
+    --table-header-bg: #2a2a2a;
+  }
+}

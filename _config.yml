@@ -6,7 +6,6 @@ repository: "synapse-linux/synapse-linux.github.io"
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-primer
 permalink: pretty
 
 # GitHub Pages settings
@@ -17,7 +16,6 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-feed
-  - jekyll-paginate
 
 # Collections
 collections:
